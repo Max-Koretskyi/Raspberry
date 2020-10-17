@@ -1,0 +1,14 @@
+[Unit]
+Description = Telegram Bot Run on Boot
+After = network.target
+
+[Service]
+ExecStart= node /home/pi/GitHub/Raspberry/bot bot.js
+WorkingDirectory=/home/pi/GitHub/Raspberry/bot
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
