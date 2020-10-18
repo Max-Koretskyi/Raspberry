@@ -1,0 +1,14 @@
+[Unit]
+Description = NodeJS Webserver starter
+After = network.target
+
+[Service]
+ExecStart= node /home/pi/GitHub/Raspberry/web/web_server web_server.js
+WorkingDirectory=/home/pi/GitHub/Raspberry/web/web_server
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
