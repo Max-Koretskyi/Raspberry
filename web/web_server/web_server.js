@@ -6,6 +6,6 @@ http.createServer(function (req, res) {
   /*Use the url module to turn the querystring into an object:*/
   let q = url.parse(req.url, true).query;
   /*Return the year and month from the query object:*/
-  let txt = q.year + " " + q.month;
+  let txt = 'hello world';
   res.end(txt);
 }).listen(8080);
